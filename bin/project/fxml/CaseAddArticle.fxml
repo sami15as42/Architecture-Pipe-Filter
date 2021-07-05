@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="447.0" prefWidth="601.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.CaseAddArticleController">
+   <children>
+      <VBox alignment="BOTTOM_RIGHT" layoutX="1.0" layoutY="1.0" prefHeight="447.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="338.0" prefWidth="480.0">
+               <children>
+                  <Label text="Enter the name of the article">
+                     <VBox.margin>
+                        <Insets bottom="12.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="articleName" promptText="Enter the name of the article" />
+                  <Label text="Enter the rental price">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="locationPrice" promptText="Enter the rental price">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="71.0" prefWidth="480.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="427.0" text="Choose the type of the article" />
+                        <VBox prefHeight="71.0" prefWidth="444.0">
+                           <children>
+                              <RadioButton mnemonicParsing="false" text="Film">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Game" toggleGroup="$tGroup" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="60.0" right="60.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="33.0" prefWidth="166.0" text="Go Back to menu">
+                     <HBox.margin>
+                        <Insets right="16.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#nextPushed" prefHeight="33.0" prefWidth="79.0" text="Next">
+                     <HBox.margin>
+                        <Insets right="60.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
